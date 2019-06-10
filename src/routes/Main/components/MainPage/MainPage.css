@@ -18,9 +18,13 @@ menu {
 
 h1{
   color: white;
+
+  word-break: keep-all;
 }
 h2{
   color: white;
+
+  word-break: keep-all;
 }
 
 text {
