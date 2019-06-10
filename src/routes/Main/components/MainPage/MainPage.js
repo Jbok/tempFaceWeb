@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import BackgroundImageOnLoad from 'background-image-on-load';
 import { FormHelperText } from '@material-ui/core';
@@ -6,6 +7,27 @@ import Button from '@material-ui/core/Button'
 import { DASHBOARD_PATH } from 'constants/paths'
 import './MainPage.css';
 import Logo from 'containers/Navbar/Logo';
+import { MEDIA_QUERY_PHONE, MEDIA_QUERY_PHONE_LANDSCAPE } from 'utils/media';
+
+const Title = styled.h1`
+  ${MEDIA_QUERY_PHONE(`
+    font-size: 2rem;
+  `)}
+
+  ${MEDIA_QUERY_PHONE_LANDSCAPE(`
+    font-size: 2rem;
+  `)}
+`;
+
+const Description = styled.h2`
+  ${MEDIA_QUERY_PHONE(`
+    font-size: 1.5rem;
+  `)}
+
+  ${MEDIA_QUERY_PHONE_LANDSCAPE(`
+    font-size: 1.5rem;
+  `)}
+`;
 
 class MainPage extends Component {
   state = {   
